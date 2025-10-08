@@ -16,6 +16,6 @@ def login(user: UserLogin)
     for u in users:
         if u.username == username:
             return u
-    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="username not found")
+    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="user name not found")
 
 
