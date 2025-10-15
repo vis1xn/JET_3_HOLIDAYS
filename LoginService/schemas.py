@@ -1,5 +1,5 @@
 from pydantic import BaseModel, EmailStr, constr
-#from datetime import date
+from datetime import date
 
 class UserSignUp(BaseModel):
     username: constr(min_length=3, max_length=10)
