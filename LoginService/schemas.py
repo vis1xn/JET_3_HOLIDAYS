@@ -1,5 +1,6 @@
-from pydantic import BaseModel, EmailStr, constr
+from pydantic import BaseModel, EmailStr, constr, Field
 from datetime import date
+from typing import Optional
 
 class UserSignUp(BaseModel):
     username: constr(min_length=3, max_length=10)
@@ -8,7 +9,9 @@ class UserSignUp(BaseModel):
     password: constr(min_length=4)
     dateofbirth: date
    
+    class Config:
+        orm_mode = True
 
 class UserLogin(BaseModel):
     email: EmailStr
-    password: constr
+    password: constr(min_length=4)
