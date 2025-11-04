@@ -10,6 +10,7 @@ class FlightBookingBase(BaseModel):
     departure_time: time
     arrival_time: time
 
+
 class FlightBookingCreate(FlightBookingBase):
     pass
 
